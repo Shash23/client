@@ -5,32 +5,34 @@ import Header from "./Header";
 import {Route, Routes} from "react-router-dom";
 import Layout from "./Layout";
 
-import Home from "./pages/home.js";
-import Login from "./pages/login.js";
-import RegisterPage from "./pages/RegisterPage";
+import Home from "./pages/home";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Create from "./pages/create_post";
+import PostPage from "./pages/post_page";
+import Edit from "./pages/edit_post";
 
 import {UserContextProvider} from "./UserContext";
 
-import CreatePost from "./pages/CreatePost";
-import PostPage from "./pages/PostPage";
-import EditPost from "./pages/EditPost";
 
-const dotenv = require('dotenv').config()
+// const dotenv = require('dotenv').config()
 
 function App() {
-  return (
+  return(
     <UserContextProvider>
       <Routes>
           <Route path="/" element = {<Layout />}>
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/create" element={<CreatePost />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/create" element={<Create />} />
           <Route path="/post/:id" element={<PostPage />} />
-          <Route path="/edit/:id" element={<EditPost />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Route>
       </Routes>
     </UserContextProvider>
+
+    
   );
 }
 
