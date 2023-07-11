@@ -6,7 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import Layout from "./Layout";
 
 import Home from "./pages/home";
-import Login from "./pages/login";
+import Login from "./pages/login"
 import Register from "./pages/register";
 import Create from "./pages/create_post";
 import PostPage from "./pages/post_page";
@@ -31,7 +31,6 @@ function App() {
         </Route>
       </Routes>
     </UserContextProvider>
-
     
   );
 }
