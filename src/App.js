@@ -15,12 +15,11 @@ import Edit from "./pages/edit_post";
 import {UserContextProvider} from "./UserContext";
 
 
-// const dotenv = require('dotenv').config()
-
 function App() {
   return(
     <UserContextProvider>
       <Routes>
+        
           <Route path="/" element = {<Layout />}>
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
